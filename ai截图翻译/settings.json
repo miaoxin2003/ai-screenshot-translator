@@ -1,0 +1,12 @@
+{
+    "screenshot_hotkey": "alt+shift+s",
+    "area_screenshot_hotkey": "f1",
+    "translation_mode": "en-zh",
+    "model": "Qwen/Qwen2.5-VL-32B-Instruct",
+    "image_detail": "low",
+    "result_opacity": 0.9,
+    "auto_minimize": true,
+    "api_key": "sk-rblicsnkfbdoztkkoutgglnvaebztcyodvfhdiekcpmwhavt",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "custom_models": []
+}
