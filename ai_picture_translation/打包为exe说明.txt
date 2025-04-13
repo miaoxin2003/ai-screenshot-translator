@@ -1,0 +1,64 @@
+========== AI截图翻译工具打包说明 ==========
+
+本文档提供了如何将AI截图翻译工具打包成Windows可执行文件(exe)的详细步骤。
+
+【准备工作】
+
+1. 确保已安装Python (建议3.7以上版本)
+2. 确保已安装所有依赖项：
+   打开命令提示符/终端，进入项目目录，执行：
+   pip install -r requirements.txt
+
+【打包步骤】
+
+方法一：使用打包脚本（推荐）
+------------------------
+1. 打开命令提示符/终端
+2. 进入项目目录
+3. 执行打包脚本：
+   python setup.py
+4. 等待打包完成（可能需要几分钟时间）
+5. 打包完成后，可执行文件位于dist目录下
+
+方法二：手动使用PyInstaller
+------------------------
+1. 确保已安装PyInstaller：
+   pip install pyinstaller
+2. 进入项目目录
+3. 执行以下命令：
+   pyinstaller --name="AI截图翻译工具" --onefile --noconsole --clean --add-data="settings.json;." main.py
+4. 等待打包完成
+5. 可执行文件位于dist目录下
+
+【可能遇到的问题及解决方法】
+
+1. 缺少模块错误
+   解决方法：确保已安装所有依赖，执行：
+   pip install -r requirements.txt
+
+2. 运行打包后的exe文件提示缺少DLL
+   解决方法：可能是系统缺少Microsoft Visual C++ Redistributable，
+   请下载并安装最新版本：https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+3. 打包后运行时出现"无法找到XXX模块"
+   解决方法：修改setup.py，添加缺失的模块到hidden-import参数中，例如：
+   --hidden-import=模块名称
+
+4. 打包时间过长
+   解决方法：这是正常现象，PyInstaller需要分析和打包所有依赖，请耐心等待
+
+5. 文件过大
+   解决方法：打包的exe文件包含Python解释器和所有依赖，因此文件较大是正常的
+
+【使用说明】
+
+打包完成后：
+1. 在dist目录找到"AI截图翻译工具.exe"
+2. 双击运行即可使用
+3. 首次运行时可能会被杀毒软件拦截，请添加到信任列表
+
+注意：如果有使用自定义图标的需求，请将图标文件(icon.ico)放在resources目录下，
+并修改setup.py中的相关注释行。
+
+========== 作者联系方式 ==========
+如有问题，请参考README.md或提交问题反馈。 

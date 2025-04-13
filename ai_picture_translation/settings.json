@@ -1,0 +1,18 @@
+{
+    "screenshot_hotkey": "alt+shift+s",
+    "area_screenshot_hotkey": "f1",
+    "translation_mode": "en-zh",
+    "model": "Qwen/Qwen2.5-VL-32B-Instruct",
+    "image_detail": "low",
+    "result_opacity": 0.9,
+    "auto_minimize": true,
+    "api_key": "sk-rblicsnkfbdoztkkoutgglnvaebztcyodvfhdiekcpmwhavt",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "custom_models": [
+        "qwen/qwen2.5-vl-32b-instruct:free"
+    ],
+    "use_streaming": true,
+    "background_image": "C:/Users/baish/Desktop/preview.jpg",
+    "background_opacity": 1.0,
+    "background_scale": 1.0
+}
